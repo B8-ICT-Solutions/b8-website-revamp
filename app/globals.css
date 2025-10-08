@@ -1,20 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #6817E5;
   --foreground: #171717;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-tektur: var(--font-tektur);
+  --font-roboto-flex: var(--font-roboto-flex);
+  --font-inter:var(--font-inter)
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #6817E5;
     --foreground: #ededed;
   }
 }
@@ -23,4 +24,73 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Glass pill button (matches the provided UI) */
+.glass-button {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  padding:15px 20px;
+  cursor: pointer;
+  border-radius: 9999px; /* pill */
+  color: rgba(255, 255, 255, 0.9);
+  background: #FFFFFF1A;
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.glass-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+}
+
+.glass-button:active {
+  transform: translateY(0);
+}
+
+.glass-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.glass-button::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 9999px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15);
+  pointer-events: none;
+}
+
+@keyframes ledGlow {
+  0% {
+    background-image: linear-gradient(to bottom, #ffffff 0%, #7B747E 30%, #7B747E 100%);
+  }
+  25% {
+    background-image: linear-gradient(to bottom, #d9d5db 0%, #7B747E 40%, #7B747E 100%);
+  }
+  50% {
+    background-image: linear-gradient(to top, #ffffff 0%, #7B747E 30%, #7B747E 100%);
+  }
+  75% {
+    background-image: linear-gradient(to top, #d9d5db 0%, #7B747E 40%, #7B747E 100%);
+  }
+  100% {
+    background-image: linear-gradient(to bottom, #ffffff 0%, #7B747E 30%, #7B747E 100%);
+  }
+}
+
+.animate-led {
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: ledGlow 2.5s ease-in-out infinite;
 }
