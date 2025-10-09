@@ -92,5 +92,5 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: ledGlow 2.5s ease-in-out infinite;
+  animation: ledGlow 6s ease-in-out infinite;
 }
