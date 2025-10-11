@@ -22,7 +22,7 @@ const Aboutb8: React.FC = () => {
             priority
             className="md:object-cover border-2"
           />
-          <div className="md:px-8 font-roboto-flex md:ml-16 translate-y-[110px]  w-4/5 ml-5 md:translate-y-[260px] py-5 border md:w-[390px]">
+          <div className="md:px-8 font-roboto-flex md:ml-16 sm:translate-y-[100px]  translate-y-[30%]  w-4/5 ml-5 md:translate-y-[260px] py-5 border md:w-[390px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
             rhoncus volutpat ex sit amet interdum. Vestibulum ut ultricies ipsum.
             Maecenas tincidunt orci tempor lorem venenatis, lacinia ornare
