@@ -15,7 +15,7 @@ import MobileHalfConerIntro from './components/MobileHalfConerIntro';
 
 const Home = () => {
   return (
-    <div className='relative h-[685px] pt-[72px] '>
+    <div className='relative  pt-[72px] '>
       {/* Background Gradient (pale, behind everything) */}
       <CGradientBackground />
 
@@ -23,12 +23,11 @@ const Home = () => {
       <CVdBackground />
 
       {/* hero.svg background */}
-      <div className='absolute top-0 left-0 w-full h-[673px] hidden md:block'>
+      <div className='absolute top-0 left-[-8px] w-full h-[674px]  hidden md:block'>
         <Image
           src='/hero.svg'
           alt='hero background'
           fill
-          className='object-cover'
           priority
         />
       </div>
