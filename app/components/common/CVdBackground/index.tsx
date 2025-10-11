@@ -9,7 +9,7 @@ const CVdBackground: React.FC<CVdBackgroundProps> = ({ className }) => {
   return (
     <video
       className={clsx(
-        'fixed top-0 left-0 w-full h-full object-cover -z-10',
+        'fixed top-0 left-0 w-full scale-[1.9]   h-full object-cover -z-10',
         className
       )}
       src="/Aura.mp4"

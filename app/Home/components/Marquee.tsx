@@ -18,7 +18,7 @@ const ServicesMarquee = () => {
   const repeatedImages = [...images, ...images, ...images];
 
   return (
-    <div style={{ width: "100vw", overflow: "hidden",marginTop:"107px" }}>
+    <div  className="w-screen overflow-hidden md:mt-[200px] mt-[20px] ">
       <Marquee
         gradient={false}
         speed={50}

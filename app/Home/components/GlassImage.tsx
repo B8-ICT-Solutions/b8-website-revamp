@@ -1,28 +1,30 @@
-import React from 'react'
+import React from 'react';
 import Image from 'next/image';
-
 
 const GlassImage = () => {
   return (
-    <Image
-    src='/glass.png'
-    alt='glass'
-    width={821}
-    height={685}
-    priority
-    style={{
-      width: '821px',
-      height: '685px',
-      position: 'absolute',
-      top: -72,
-      left: 619,
-      mixBlendMode: 'color-dodge',
-      opacity: 1,
-      zIndex: 5,
-    }}
-    className='border-l-[1px] border-white'
-  />
-  )
-}
+    <div
+      style={{
+        position: 'absolute',
+        top: -72,
+        zIndex: 5,
+        mixBlendMode: 'color-dodge', // <-- apply to wrapper
+        pointerEvents: 'none', // optional
+      }}
+      className='md:left-[43%] h-[685px] md:w-[57%] left-0 w-full '
+    >
+      <Image
+        src='/glass.png'
+        alt='glass'
+        fill
+        priority
+        style={{
+          objectFit: 'cover',
+          opacity: 1,
+        }}
+      />
+    </div>
+  );
+};
 
-export default GlassImage
+export default GlassImage;

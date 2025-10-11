@@ -1,40 +1,64 @@
-import Image from 'next/image';
-import React from 'react';
+'use client'
+
+import React from 'react'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+
+
+import { fadeInUp } from '@/app/utils/animations'
+import CTitle from '@/app/components/common/CTitle'
+import CLineCardContainer from '@/app/components/common/CLineCardContainer'
+import { cardsData } from '@/app/utils/mock'
 
 const ServicesSection = () => {
   return (
-    <div className='pt-[123px] text-center'>
-      <h3 className='text-3xl font-roboto-flex font-normal'>Services</h3>
-      <h3 className='text-[58px] mb-[65px] font-tektur mt-[40px] bg-gradient-to-t from-[#7B747E] to-[#FFFFFF] bg-clip-text text-transparent'>
-        Professional Services
-      </h3>
+    <section className="pt-[80px] md:pt-[123px] text-center">
+      {/* ===== Section Header ===== */}
+      <motion.h3
+        className="text-[24px] md:text-3xl font-roboto-flex font-normal"
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInUp}
+        custom={0}
+        viewport={{ once: true }}
+      >
+        Services
+      </motion.h3>
 
-      <div className='relative h-[564px] '>
-        <div className='h-[111px] w-[100svw] absolute top-0 z-10 border-t border-b border-white'></div>
+      <CTitle title="Professional Services" />
 
-        <div className='h-[1px] w-[100svw] absolute bottom-0 z-10 mt-[453px] border-t border-b border-white'></div>
+      {/* ===== First Card Section ===== */}
+      <CLineCardContainer cardsData={cardsData} />
 
-        <div className='grid h-full  container mx-auto px-6 md:px-10 grid-cols-1 md:grid-cols-3'>
-          <div className='bg-black w-full h-full relative'>
-
-          <Image   src='/line16.png' alt='line' height={564} width={300} className='border-2 h-[564px] right-[-48px] w-[51px] absolute z-20'/>
-           
-          
-
-          </div>
-           <div className='bg-black w-full h-full relative'>
-
-          <Image   src='/line16.png' alt='line' height={564} width={300} className='border-2 h-[564px] right-[-48px] w-[51px] absolute'/>
-           
-          
-
-          </div>
-        
-          <div className='bg-black w-full h-full '>1</div>
-        </div>
+      {/* ===== Managed Services Section ===== */}
+      <div className="mt-[61px]">
+        <CTitle title="Managed Services" />
+        <CLineCardContainer cardsData={cardsData} />
       </div>
-    </div>
-  );
-};
 
-export default ServicesSection;
+      {/* ===== "More" Arrow Animation ===== */}
+      <motion.h3
+        className="mt-[80px] text-[30px] font-roboto-flex hidden  md:flex items-center justify-center gap-2.5 "
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        More
+        <motion.div
+          animate={{ x: [0, 5, 0], opacity: [1, 0.4, 1] }}
+          transition={{
+            duration: 1.2,
+            repeat: Infinity,
+            ease: 'easeInOut',
+            delay: 0.3,
+          }}
+        >
+          <Image src="/arrow.svg" alt="arrow" height={22} width={8} />
+        </motion.div>
+      </motion.h3>
+    </section>
+  )
+}
+
+export default ServicesSection
