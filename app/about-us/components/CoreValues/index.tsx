@@ -9,8 +9,8 @@ const CoreValues = () => {
       <div>
         <div className='grid  h-full container mx-auto px-6 md:px-10 grid-cols-2 md:grid-cols-4 gap-5 lg:'>
           <Image
-            src='/coreValues/innovations.png'
-            alt='menu'
+            src='/coreValues/Innovations.png'
+            alt='Innovations'
             width={1200}
             height={1200}
             className='w-full'
@@ -18,7 +18,7 @@ const CoreValues = () => {
           />
           <Image
             src='/coreValues/Customer.png'
-            alt='menu'
+            alt='Customer'
             width={1200}
             height={1200}
             className='w-full'
@@ -26,7 +26,7 @@ const CoreValues = () => {
           />{' '}
           <Image
             src='/coreValues/Excellence.png'
-            alt='menu'
+            alt='Exellence'
             width={1200}
             height={1200}
             className='w-full'
@@ -34,7 +34,7 @@ const CoreValues = () => {
           />{' '}
           <Image
             src='/coreValues/Integrity.png'
-            alt='menu'
+            alt='Integrity'
             width={1200}
             height={1200}
             className='w-full'

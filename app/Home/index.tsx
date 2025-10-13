@@ -19,16 +19,14 @@ const Home = () => {
   return (
     <div className='relative  pt-[160px] '>
       {/* Background Gradient (pale, behind everything) */}
-     
-      <CHeader/>
-      <CMobileHeader/>
+
+      <CHeader />
+      <CMobileHeader />
       <CGradientBackground />
-      <CCursor/>
+      <CCursor />
 
       {/* Background Video */}
       <CVdBackground />
-
-
 
       {/* hero.svg background */}
       <div className='absolute top-[-10px] left-[-8px] right-0  hidden  w-[100svw] h-[674px] 2xl:h-[900px]   md:block'>
@@ -38,7 +36,6 @@ const Home = () => {
           fill
           priority
           style={{
-            objectFit: 'cover',
             opacity: 0.9,
           }}
         />
