@@ -40,7 +40,7 @@ const CLineCard: React.FC<CLineCardProps> = ({
           alt='line'
           height={564}
           width={300}
-          className='border-2 h-[564px] right-[-48px] w-[51px] absolute z-20'
+          className='border-2 h-[564px] opacity-50 right-[-48px] w-[51px] absolute z-20'
         />
       )}
 
@@ -67,7 +67,7 @@ const CLineCard: React.FC<CLineCardProps> = ({
         </motion.div>
 
         <motion.h3
-          className='text-[96px] absolute bottom-[-45px] right-[28px] font-roboto-flex font-extralight'
+          className='text-[96px] absolute bottom-[-34px] right-[30px] font-roboto-flex font-extralight text-white/70'
           variants={fadeInUp}
           custom={delay + 0.6}
         >

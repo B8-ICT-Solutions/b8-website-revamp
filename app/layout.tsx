@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Tektur,Roboto_Flex,Inter } from "next/font/google";
 import "./globals.css";
+import CMobileHeader from "./components/common/CMobileHeader";
 
 const tektur = Tektur({
   variable: "--font-tektur",
@@ -30,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${tektur.variable} ${robotoFlex.variable} ${inter.variable} antialiased`}
+        className={`${tektur.variable} ${robotoFlex.variable} ${inter.variable} antialiased `}
       >
         {children}
       </body>

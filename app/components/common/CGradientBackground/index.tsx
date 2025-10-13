@@ -11,7 +11,7 @@ const CGradientBackground: React.FC<CGradientBackgroundProps> = ({
   return (
     <div
       className={clsx(
-        'absolute inset-0 z-0 bg-gradient-to-b from-[#19013ece] to-[#1B082A00]',
+        'absolute inset-0 z-[-1] bg-gradient-to-b from-[#19013ece] to-[#1B082A00]',
         className
       )}
     />

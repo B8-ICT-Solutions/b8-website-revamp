@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const ContactButton = () => {
   return (
-    <button className='h-[60px] font-inter text-[16px] font-medium w-[171px] border border-white absolute bg-gradient-to-r from-[#2a0b58] to-[#3b1b74] z-30 top-[-30px] flex items-center justify-center gap-2.5 overflow-hidden cursor-pointer group'>
+    <button className='h-[60px] font-inter text-[16px] font-medium w-[171px] border border-white absolute bg-gradient-to-r from-[#2a0b58] to-[#3b1b74] z-30 top-[-40px] 2xl:top-[165px] flex items-center justify-center gap-2.5 overflow-hidden cursor-pointer group'>
       {/* Diamond Icon */}
       <div className='transition-transform duration-500 group-hover:rotate-180'>
         <Image src={'/diamond.png'} width={20} height={20} alt='diamond' />
