@@ -57,18 +57,24 @@ const CMobileHeader = () => {
       {/* Dropdown menu (under header, aligned right) */}
       {isMenuOpen && (
         <div className="absolute right-5 top-[65px] flex flex-col items-start bg-black text-white py-4 px-6 space-y-3 font-roboto-flex font-medium text-sm border border-white/10 rounded-xl w-[200px] shadow-lg">
+           <Link
+            href="/"
+            className="hover:underline duration-300 cursor-pointer transition-all"
+          >
+            Home
+          </Link>
           <Link
             href="/about-us"
             className="hover:underline duration-300 cursor-pointer transition-all"
           >
             About us
           </Link>
-          <p className="hover:underline duration-300 cursor-pointer transition-all">
+          <Link href={'/services'} className="hover:underline duration-300 cursor-pointer transition-all">
             Services
-          </p>
-          <p className="hover:underline duration-300 cursor-pointer transition-all">
+          </Link>
+          <Link href={'/blogs'} className="hover:underline duration-300 cursor-pointer transition-all">
             Blogs
-          </p>
+          </Link>
         </div>
       )}
     </div>
