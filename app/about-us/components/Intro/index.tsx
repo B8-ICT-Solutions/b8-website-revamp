@@ -1,10 +1,23 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const Intro = () => {
   return (
-    <div className='flex flex-col  xl:flex-row mt-[50px] md:mt-[80px] lg:mt-[100px] items-center justify-center gap-[50px] md:gap-0 order-2 px-5 '>
-      <div className='md:w-[80%] lg:w-[45%] border-[0.05px] border-gray-200/50 order-2 md:order-0'>
+    <section className='flex flex-col xl:flex-row mt-[50px] md:mt-[80px] lg:mt-[100px] items-center justify-center gap-[50px] md:gap-0 order-2 px-5'>
+      
+      {/* Text Section */}
+      <motion.div
+        className='md:w-[80%] lg:w-[45%] border-[0.05px] border-gray-200/50 order-2 md:order-0'
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{
+          duration: 1,
+          ease: [0.25, 0.1, 0.25, 1],
+          delay: 0.3, // appears slightly after Hero
+        }}
+      >
         <p className='font-roboto-flex text-[16px] font-normal text-center md:text-start p-3 lg:p-5'>
           Established in 2023, B8 is a global team currently operating in
           Asia-Pacific Region. We specialize in Cloud Infrastructure and we have
@@ -18,26 +31,61 @@ const Intro = () => {
           minimal disruption for your infrastructure, you are at the right
           place.
         </p>
-      </div>
-      <div className='md:w-[50%]   flex flex-col md:flex-row justify-center items-center gap-[44px] '>
-        <Image
-          src='/b8MobileLogo.png'
-          alt='logo'
-          width={167}
-          height={167}
-          priority
-          className='z-[999]  lg:w-[212px] lg:h-[212px]'
-        />
-        <Image
-          src='/mobileAwsPartner.png'
-          alt='logo'
-          width={300}
-          height={300}
-          priority
-          className='lg:w-[350] lg:h-[250px]'
-        />
-      </div>
-    </div>
+      </motion.div>
+
+      {/* Image Section */}
+      <motion.div
+        className='md:w-[50%] flex flex-col md:flex-row justify-center items-center gap-[44px]'
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{
+          duration: 1.1,
+          ease: 'easeOut',
+          delay: 0.8, // enters slightly after text
+        }}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.9,
+            ease: 'easeOut',
+            delay: 1, // minor stagger for each logo
+          }}
+        >
+          <Image
+            src='/b8MobileLogo.png'
+            alt='logo'
+            width={167}
+            height={167}
+            priority
+            className='z-[999] lg:w-[212px] lg:h-[212px]'
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1,
+            ease: 'easeOut',
+            delay: 1.2,
+          }}
+        >
+          <Image
+            src='/mobileAwsPartner.png'
+            alt='AWS partner logo'
+            width={300}
+            height={300}
+            priority
+            className='lg:w-[350px] lg:h-[250px]'
+          />
+        </motion.div>
+      </motion.div>
+    </section>
   );
 };
 

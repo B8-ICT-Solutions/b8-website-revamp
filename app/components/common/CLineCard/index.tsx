@@ -61,7 +61,7 @@ const CLineCard: React.FC<CLineCardProps> = ({
           variants={fadeInUp}
           custom={delay + 0.4}
         >
-          <h3 className='font-roboto-flex text-[20px] leading-8'>
+          <h3 className='  text-[20px] leading-8'>
             {description}
           </h3>
         </motion.div>

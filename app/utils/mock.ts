@@ -15,7 +15,7 @@ export const cardsData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus volutpat ex sit amet interdum. Vestibulum ut ultricies ipsum.",
     number: "02",
     image: "/line16.png",
-    delay: 1.0,
+    delay: 0.6,
   },
   {
     title: "Cloud Infrastructure",
@@ -23,7 +23,7 @@ export const cardsData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus volutpat ex sit amet interdum. Vestibulum ut ultricies ipsum.",
     number: "03",
     image: null,
-    delay: 1.6,
+    delay: 1,
   },
 ];
 

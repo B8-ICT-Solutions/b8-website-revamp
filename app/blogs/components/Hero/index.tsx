@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className='mt-[100px] text-center px-5 container mx-auto mb-[75px] lg:mb-[120px]'>
       <CTitle
-        title='Our Services'
+        title='Our Blogs'
         className='text-[40px] lg:text-[70px] mb-[20px] p-0 font-medium'
       />
       <motion.p
@@ -19,8 +19,7 @@ const Hero = () => {
         }}
         viewport={{ once: true }}
       >
-        Delivering end-to-end technology solutions tailored to your business
-        needs.
+       Insights, case studies, and news from the B8 ICT Solutions team.
       </motion.p>
     </div>
   );

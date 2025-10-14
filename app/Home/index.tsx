@@ -14,6 +14,8 @@ import MobileHalfConerIntro from './components/MobileHalfConerIntro';
 import CMobileHeader from '../components/common/CMobileHeader';
 import CHeader from '../components/common/CHeader';
 import CCursor from '../components/common/CCursor';
+import { motion } from 'framer-motion';
+import HeroText from './components/HeroText';
 
 const Home = () => {
   return (
@@ -41,12 +43,7 @@ const Home = () => {
         />
       </div>
 
-      <p className=' z-50 absolute top-[505px] 2xl:top-[700px] w-[370px] font-inter font-medium left-[43%] hidden md:block '>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam atque
-        voluptatem tempora, neque repellendus minima vel quasi vitae reiciendis
-        fugit distinctio nesciunt earum saepe! Molestiae in impedit amet optio
-        explicabo.
-      </p>
+     <HeroText/>
 
       {/* Content */}
       <div className='container relative z-10 px-6 md:px-10 mx-auto'>
@@ -72,7 +69,9 @@ const Home = () => {
 
       <ScrollMore />
 
-      <Marquee />
+      <div className='mt-[200px]'>
+        <Marquee />
+      </div>
       <ServicesSection />
       <div className='container px-10 mx-auto relative'>
         <AboutB8 />

@@ -1,8 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
+import clsx from "clsx";
 
-const ServicesMarquee = () => {
+type ServicesMarqueeType = {
+  className?:string
+}
+
+const ServicesMarquee:React.FC<ServicesMarqueeType> = ({className}) => {
+
   const images = [
     "/marquee/aws.png",
     "/marquee/docker.png",
@@ -18,7 +24,7 @@ const ServicesMarquee = () => {
   const repeatedImages = [...images, ...images, ...images];
 
   return (
-    <div  className="w-screen  overflow-hidden md:mt-[200px] mt-[20px] ">
+    <div  className={clsx("w-screen  overflow-hidden md:mt-[60px] mt-[20px] ",className)}>
       <Marquee
         gradient={false}
         speed={50}
