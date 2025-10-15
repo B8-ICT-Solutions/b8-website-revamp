@@ -26,10 +26,10 @@ const CMobileHeader = () => {
       >
         <div className="h-[65px] px-5 flex items-center justify-between">
           <Image
-            src="/b8MobileLogo.png"
+            src="/logo.png"
             alt="logo"
-            width={40}
-            height={40}
+            width={70}
+            height={70}
             priority
           />
 
