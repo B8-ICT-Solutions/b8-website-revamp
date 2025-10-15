@@ -6,21 +6,19 @@ import { motion } from 'framer-motion';
 
 const CFooter = () => {
   return (
-    <div className='mt-[133px] relative lg:h-[458px] w-full overflow-hidden'>
+    <div className="mt-[133px] relative lg:h-[480px] w-full overflow-hidden">
       {/* Gradient Background */}
       <CGradientBackground />
 
-      {/* Background Image with overlay */}
-      <div className='absolute inset-0 z-0'>
+      {/* Background Image with soft gradient overlay */}
+      <div className="absolute inset-0 z-0">
         <Image
-          src='/cfooter.png'
-          alt='footer background'
+          src="/cfooter.png"
+          alt="footer background"
           fill
           priority
-          style={{ objectFit: 'cover', opacity: 0.9 }}
+          className="object-cover opacity-90"
         />
-
-        {/* Color Overlay with multiply blend */}
         <div
           className='absolute inset-0'
           style={{
@@ -31,12 +29,12 @@ const CFooter = () => {
       </div>
 
       {/* Footer Content */}
-      <div className='relative z-10 flex flex-col lg:flex-row gap-[107px] lg:gap-0 items-center justify-around h-full text-white px-6 py-10'>
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between h-full text-white px-8 py-16 lg:px-24">
         {/* Animated Title */}
         <motion.h1
-          className='text-[50px] lg:text-[40px] text-transparent font-medium font-tektur leading-tight bg-clip-text bg-gradient-to-b from-[#7B747E] to-[#7B747E] animate-led'
+          className='text-[50px] md:text-[60px] text-transparent font-medium font-tektur leading-tight bg-clip-text bg-gradient-to-b from-[#7B747E] to-[#7B747E] animate-led'
           initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: 'easeOut' }}
         >
           Managed and <br />
@@ -45,43 +43,60 @@ const CFooter = () => {
         </motion.h1>
 
         {/* Links Grid */}
-        <div className='grid grid-cols-3 gap-[37px] text-white text-[16px] font-inter'>
-          <h3 className='hover:underline cursor-pointer'>Home</h3>
-          <h3 className='hover:underline cursor-pointer'>About Us</h3>
-          <h3 className='hover:underline cursor-pointer'>News</h3>
-          <h3 className='hover:underline cursor-pointer'>Teams</h3>
-          <h3 className='hover:underline cursor-pointer'>Events</h3>
-          <h3 className='hover:underline cursor-pointer'>Media</h3>
-        </div>
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-3 gap-5 text-[16px] font-inter mt-10 lg:mt-0"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 1 }}
+        >
+          {['Home', 'About Us', 'News', 'Teams', 'Events', 'Media'].map(
+            (link, i) => (
+              <motion.h3
+                key={i}
+                className="cursor-pointer hover:text-[#C3A9FF] hover:underline transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+              >
+                {link}
+              </motion.h3>
+            )
+          )}
+        </motion.div>
 
         {/* Contact Form */}
-        <div className='w-[350px]  bg-opacity-10 p-4 rounded-lg '>
-          <h3 className='text-[20px] font-inter font-semibold mb-3'>
+        <motion.div
+          className="w-full sm:w-[350px] mt-10 lg:mt-0 backdrop-blur-md bg-white/10 border border-white/20 p-6 rounded-2xl shadow-lg"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 1 }}
+        >
+          <h3 className="text-[20px] font-inter font-semibold mb-4">
             Contact Us
           </h3>
 
-          <div className='flex flex-col  mt-[20px]'>
+          <div className="flex flex-col gap-3">
             <input
-              className='h-[55px] border border-white/50 bg-transparent px-3 outline-none text-white placeholder-white'
-              placeholder='Reason'
+              className="h-[50px] border border-white/30 bg-transparent px-3 outline-none text-white placeholder-white/70 rounded-md focus:border-[#C3A9FF] transition-all"
+              placeholder="Reason"
             />
             <textarea
-              className='h-[119px] border border-t-none border-white/50 bg-transparent px-3 outline-none text-white placeholder-white'
-              placeholder='Details'
+              className="h-[100px] border border-white/30 bg-transparent px-3 py-2 outline-none text-white placeholder-white/70 rounded-md focus:border-[#C3A9FF] transition-all"
+              placeholder="Details"
             />
-            <div className='flex justify-between items-center bg-black h-[42px] border border-white/50   pl-3'>
-              <h3 className='text-[16px] font-inter'>Submit</h3>
-              <button className='w-[42px] h-[41px] bg-[#6817E5] rounded flex items-center justify-center'>
-                <Image
-                  src='/rightArrow.svg'
-                  alt='arrow'
-                  height={22}
-                  width={20}
-                />
-              </button>
-            </div>
+            <motion.button
+              className="flex items-center justify-between bg-[#6817E5] hover:bg-[#7D30FF] h-[45px] px-4 rounded-md transition-all border border-white/20"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              <span className="text-[16px] font-inter">Submit</span>
+              <Image
+                src="/rightArrow.svg"
+                alt="arrow"
+                height={22}
+                width={20}
+              />
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

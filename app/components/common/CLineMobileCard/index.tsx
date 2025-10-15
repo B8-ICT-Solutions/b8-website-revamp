@@ -16,7 +16,7 @@ interface CLineMobileCardProps {
 
 const CLineMobileCard: React.FC<CLineMobileCardProps> = ({ cardsData }) => {
   return (
-    <div className="flex flex-col bg-black overflow-hidden">
+    <div className="flex flex-col bg-black overflow-hidden ">
       {cardsData?.map((card, index) => {
         // determine if this card should have a top border
         const showTopBorder = index !== 1 && index !== cardsData.length - 1;
@@ -24,7 +24,7 @@ const CLineMobileCard: React.FC<CLineMobileCardProps> = ({ cardsData }) => {
         return (
           <div
             key={index}
-            className={`h-[380px] relative flex flex-col items-center justify-center border-b border-white ${
+            className={`h-[380px]  relative flex flex-col items-center justify-center border-b border-white ${
               showTopBorder ? 'border-t' : ''
             }`}
           >
@@ -42,7 +42,7 @@ const CLineMobileCard: React.FC<CLineMobileCardProps> = ({ cardsData }) => {
             </div>
 
             {/* Card content */}
-            <div className="w-[257px] h-full relative px-3">
+            <div className="w-[257px] sm:w-[350px] md:w-[400px] h-full relative px-3">
               {/* Side lines */}
               <Image
                 src="/line16.png"

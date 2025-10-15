@@ -54,7 +54,7 @@ const BlogCard = () => {
       </div>
 
       <div className='relative z-10'>
-        <CTitle title='Modernizing Digital Banking with AWS and DevOps at Leading Financial Institution' className='mb-0 lg:text-[30px]' />
+        <CTitle title='Modernizing Digital Banking with AWS and DevOps at Leading Financial Institution' className='mb-0 md:text-[20px] lg:text-[30px]' />
         <p className='text-[#7B747E] font-inter text-[12px] mt-2'>
           B8 ICT Solutions modernized a leading bank’s digital infrastructure with AWS, Kubernetes, and GitOps, delivering a secure, scalable architecture with CI/CD automation, compliance, and improved performance for seamless digital banking.
         </p>

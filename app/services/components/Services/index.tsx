@@ -3,7 +3,7 @@
 import React from 'react';
 import CTitle from '@/app/components/common/CTitle';
 import CLineCardContainer from '@/app/components/common/CLineCardContainer';
-import { cardsData } from '@/app/utils/mock';
+import { cardsData, ManagedcardsData } from '@/app/utils/mock';
 
 const ServicesSection = () => {
   return (
@@ -16,7 +16,7 @@ const ServicesSection = () => {
       {/* ===== Managed Services Section ===== */}
       <div className='mt-[61px]'>
         <CTitle title='Managed Services' />
-        <CLineCardContainer cardsData={cardsData} />
+        <CLineCardContainer cardsData={ManagedcardsData} />
       </div>
     </section>
   );

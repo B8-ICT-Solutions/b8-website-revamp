@@ -18,7 +18,7 @@ const Intro = () => {
           delay: 0.3, // appears slightly after Hero
         }}
       >
-        <p className='font-roboto-flex text-[16px] font-normal text-center md:text-start p-3 lg:p-5'>
+        <p className='font-poppins text-[16px] lg:text-[16px] font-normal text-center md:text-start p-3 lg:p-8'>
           Established in 2023, B8 is a global team currently operating in
           Asia-Pacific Region. We specialize in Cloud Infrastructure and we have
           also expanded our team to provide on-premises solutions to our
@@ -56,12 +56,12 @@ const Intro = () => {
           }}
         >
           <Image
-            src='/b8MobileLogo.png'
+            src='/logo.png'
             alt='logo'
-            width={167}
-            height={167}
+            width={300}
+            height={300}
             priority
-            className='z-[999] lg:w-[212px] lg:h-[212px]'
+            className='z-[999] lg:w-[312px] lg:h-[312px]'
           />
         </motion.div>
 
@@ -81,7 +81,7 @@ const Intro = () => {
             width={300}
             height={300}
             priority
-            className='lg:w-[350px] lg:h-[250px]'
+            className='lg:w-[290px] lg:h-[250px]'
           />
         </motion.div>
       </motion.div>

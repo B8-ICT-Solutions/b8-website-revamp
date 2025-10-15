@@ -14,7 +14,6 @@ import MobileHalfConerIntro from './components/MobileHalfConerIntro';
 import CMobileHeader from '../components/common/CMobileHeader';
 import CHeader from '../components/common/CHeader';
 import CCursor from '../components/common/CCursor';
-import { motion } from 'framer-motion';
 import HeroText from './components/HeroText';
 
 const Home = () => {
@@ -31,7 +30,7 @@ const Home = () => {
       <CVdBackground />
 
       {/* hero.svg background */}
-      <div className='absolute top-[-10px] left-[-8px] right-0  hidden  w-[100svw] h-[674px] 2xl:h-[900px]   md:block'>
+      <div className='absolute top-[-10px] left-[-8px] right-0  hidden  w-[100svw] h-[674px] 2xl:h-[900px]   xl:block'>
         <Image
           src='/hero.svg'
           alt='hero background'
@@ -58,14 +57,14 @@ const Home = () => {
       </div> */}
 
       {/* Line under hero section */}
-      <div className='md:mt-[135px] mt-[107px]  z-10 w-full relative  '>
-        <div className='container px-10 md:mx-auto relative flex items-center justify-center md:justify-start'>
+      <div className='xl:mt-[135px] mt-[107px]  z-10 w-full relative    '>
+        <div className='container px-10 mx-auto relative flex items-center justify-center xl:justify-start'>
           <ContactButton />
         </div>
       </div>
 
       {/* Mobile Half Conar Box */}
-      <MobileHalfConerIntro />
+      {/* <MobileHalfConerIntro /> */}
 
       <ScrollMore />
 

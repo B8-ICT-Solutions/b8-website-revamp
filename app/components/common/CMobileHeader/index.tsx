@@ -10,26 +10,21 @@ const CMobileHeader = () => {
   // Detect scroll position
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 75) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 75);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div
-      className={`xl:hidden z-[9999] fixed left-0 right-0 top-0 transition-colors duration-300 ${
-        isScrolled ? 'bg-black' : 'bg-transparent'
-      }`}
-    >
-      {/* Header bar */}
-      <div className="h-[65px] px-5 flex items-center justify-between">
-        <div>
+    <div className="xl:hidden fixed left-0 right-0 top-[10px] z-[9999]">
+      {/* Header Bar */}
+      <div
+        className={`transition-colors duration-300 glass-bg rounded-full bg-transparent ${
+          isScrolled ? 'shadow-lg' : ''
+        }`}
+      >
+        <div className="h-[65px] px-5 flex items-center justify-between">
           <Image
             src="/b8MobileLogo.png"
             alt="logo"
@@ -37,27 +32,27 @@ const CMobileHeader = () => {
             height={40}
             priority
           />
-        </div>
 
-        {/* Hamburger button */}
-        <button
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="cursor-pointer"
-        >
-          <Image
-            src={isMenuOpen ? '/close.svg' : '/hamburgerMenu.svg'}
-            alt="menu"
-            width={30}
-            height={30}
-            priority
-          />
-        </button>
+          {/* Hamburger button */}
+          <button
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            className="cursor-pointer"
+          >
+            <Image
+              src={isMenuOpen ? '/close.svg' : '/hamburgerMenu.svg'}
+              alt="menu"
+              width={30}
+              height={30}
+              priority
+            />
+          </button>
+        </div>
       </div>
 
-      {/* Dropdown menu (under header, aligned right) */}
+      {/* Dropdown menu (placed outside header to fix blur stacking) */}
       {isMenuOpen && (
-        <div className="absolute right-5 top-[65px] flex flex-col items-start bg-black text-white py-4 px-6 space-y-3 font-roboto-flex font-medium text-sm border border-white/10 rounded-xl w-[200px] shadow-lg">
-           <Link
+        <div className="absolute right-5 top-[75px] flex flex-col items-start text-white py-4 px-6 space-y-3 font-roboto-flex font-medium text-sm border border-white/10 rounded-xl w-[200px] shadow-lg glass-bg">
+          <Link
             href="/"
             className="hover:underline duration-300 cursor-pointer transition-all"
           >
@@ -69,11 +64,23 @@ const CMobileHeader = () => {
           >
             About us
           </Link>
-          <Link href={'/services'} className="hover:underline duration-300 cursor-pointer transition-all">
+          <Link
+            href="/services"
+            className="hover:underline duration-300 cursor-pointer transition-all"
+          >
             Services
           </Link>
-          <Link href={'/blogs'} className="hover:underline duration-300 cursor-pointer transition-all">
+          <Link
+            href="/blogs"
+            className="hover:underline duration-300 cursor-pointer transition-all"
+          >
             Blogs
+          </Link>
+          <Link
+            href="/contact-us"
+            className="hover:underline duration-300 cursor-pointer transition-all"
+          >
+            Contact Us
           </Link>
         </div>
       )}

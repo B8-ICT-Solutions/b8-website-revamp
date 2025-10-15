@@ -51,23 +51,23 @@ const CLineCard: React.FC<CLineCardProps> = ({
           variants={fadeInUp}
           custom={delay + 0.2}
         >
-          <h3 className='text-[28px] font-tektur bg-gradient-to-t from-[#7B747E] to-[#FFFFFF] bg-clip-text text-transparent'>
+          <h3 className='text-[30px] font-tektur bg-gradient-to-t from-[#7B747E] to-[#FFFFFF] bg-clip-text text-transparent'>
             {title}
           </h3>
         </motion.div>
 
         <motion.div
-          className='text-start h-[453px] px-[71px] pt-[51px]'
+          className='text-start  h-[453px] px-[71px] pt-[81px]'
           variants={fadeInUp}
           custom={delay + 0.4}
         >
-          <h3 className='  text-[20px] leading-8'>
+          <h3 className='text-[18px]  leading-[40px] font-poppins'>
             {description}
           </h3>
         </motion.div>
 
         <motion.h3
-          className='text-[96px] absolute bottom-[-34px] right-[30px] font-roboto-flex font-extralight text-white/70'
+          className='text-[96px] absolute bottom-[-34px] right-[30px] font-roboto-flex font-extralight text-white/70 opacity-50'
           variants={fadeInUp}
           custom={delay + 0.6}
         >

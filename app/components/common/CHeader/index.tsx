@@ -31,8 +31,8 @@ const CHeader = () => {
             <Image
               src="/logo.png"
               alt="logo"
-              width={50}
-              height={50}
+              width={140}
+              height={140}
               className="cursor-pointer"
             />
           </Link>
@@ -65,7 +65,7 @@ const CHeader = () => {
         <div className="w-[33%] flex items-center justify-end">
           <button className="glass-button font-inter gap-2.5 px-[20px] py-[6px] rounded-full flex items-center hover:bg-black/60 transition-all duration-300">
             <Image src="/diamond.png" alt="dia" width={20} height={20} />
-            <span>Contact Us</span>
+            <Link href={'/contact-us'}>Contact Us</Link>
           </button>
         </div>
       </div>

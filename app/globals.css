@@ -10,7 +10,8 @@
   --color-foreground: var(--foreground);
   --font-tektur: var(--font-tektur);
   --font-roboto-flex: var(--font-roboto-flex);
-  --font-inter:var(--font-inter)
+  --font-inter:var(--font-inter);
+  --font-poppins:var(--font-poppins)
 }
 
 @media (prefers-color-scheme: dark) {

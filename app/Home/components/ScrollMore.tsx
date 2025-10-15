@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const ScrollMore = () => {
   return (
-    <div className='md:absolute flex justify-center my-[60px] right-[10%] top-[500px]  items-center gap-[15px] font-inter '>
+    <div className='xl:absolute flex justify-center my-[60px] right-[10%] top-[500px]  items-center gap-[15px] font-inter '>
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

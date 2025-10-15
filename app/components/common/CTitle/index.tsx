@@ -9,16 +9,19 @@ type CTitleProps = {
 };
 
 const CTitle: React.FC<CTitleProps> = ({ title, className }) => {
-  // If the user passes any class containing "mb-", skip the default mb-[65px]
+  // If the user passes zzzzzzzany class containing "mb-", skip the default mb-[65px]
   const hasCustomMargin = className?.includes('mb-');
+  const hasFontSize = className?.includes('md:text-[20px]');
+
 
   return (
     <motion.h3
       className={clsx(
-        'text-[28px] md:text-[58px] font-tektur mt-[15px] md:mt-[40px]',
+        'text-[28px]  font-tektur mt-[15px] md:mt-[40px]',
         'bg-gradient-to-t from-[#7B747E] to-[#FFFFFF] bg-clip-text text-transparent',
         'will-change-transform will-change-opacity transform-gpu',
         hasCustomMargin ? '' : 'mb-[65px]', // ✅ default margin only if user didn’t override
+        hasFontSize?'':'md:text-[58px]',
         className
       )}
       initial={{ opacity: 0, y: 40 }}
