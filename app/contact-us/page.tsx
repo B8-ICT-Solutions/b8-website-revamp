@@ -8,7 +8,7 @@ import Hero from './components/Hero'
 
 const ContactUs = () => {
   return (
-    <div className=''>
+    <div className='pb-[100px]'>
          <CCursor/>
          <CVdBackground/>
          <CGradientBackground />
