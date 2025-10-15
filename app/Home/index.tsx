@@ -10,7 +10,7 @@ import ServicesSection from './components/services/ServicesSection';
 import ScrollMore from './components/ScrollMore';
 import AboutB8 from './components/aboutb8/aboutb8';
 import CFooter from '../components/common/CFooter';
-import MobileHalfConerIntro from './components/MobileHalfConerIntro';
+// import MobileHalfConerIntro from './components/MobileHalfConerIntro';
 import CMobileHeader from '../components/common/CMobileHeader';
 import CHeader from '../components/common/CHeader';
 import CCursor from '../components/common/CCursor';
@@ -18,7 +18,7 @@ import HeroText from './components/HeroText';
 
 const Home = () => {
   return (
-    <div className='relative  pt-[160px] '>
+    <div className='relative  pt-[100px] xl:pt-[160px] '>
       {/* Background Gradient (pale, behind everything) */}
 
       <CHeader />
@@ -57,7 +57,7 @@ const Home = () => {
       </div> */}
 
       {/* Line under hero section */}
-      <div className='xl:mt-[135px] mt-[107px]  z-10 w-full relative    '>
+      <div className='xl:mt-[135px] mt-[77px]   z-10 w-full relative    '>
         <div className='container px-10 mx-auto relative flex items-center justify-center xl:justify-start'>
           <ContactButton />
         </div>

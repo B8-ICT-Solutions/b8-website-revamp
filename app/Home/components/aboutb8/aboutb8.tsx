@@ -8,28 +8,38 @@ import CTitle from '@/app/components/common/CTitle';
 const Aboutb8: React.FC = () => {
   return (
     <>
-      <div className='mt-20   md:h-[450px] relative'>
-        <div className='container mx-aut pt-[20px] md:pt-0 text-center relative'>
+      <div className='mt-20 relative xl:h-[450px]'>
+        <div className='container mx-auto pt-5 md:pt-0 text-center relative'>
           {/* Title */}
           <CTitle title='About B8' />
 
           {/* Left Image with overlay text */}
-          <div className='md:absolute top-0 left-0 md:w-1/2 h-[290px] md:h-[450px] z-10'>
+          <div className='relative xl:absolute top-0 left-0 xl:w-1/2 h-[290px] xl:h-[450px] z-10'>
             <Image
               src='/aboutb8alyer.png'
               alt='about overlay'
               fill
               priority
-              className='md:object-cover border-2'
+              className='object-cover border-2'
+              style={{
+                maskImage:
+                  'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)',
+                WebkitMaskImage:
+                  'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)',
+              }}
             />
-            <div className='md:px-8 font-poppins md:ml-16 sm:translate-y-[100px]  translate-y-[30%]  w-4/5 ml-5 md:translate-y-[250px] py-5 border md:w-[390px]'>
-            We are proud to be one of the few AWS Advanced Tier Partners in Myanmar, demonstrating our expertise in cloud infrastructure and commitment to delivering world-class solutions on the AWS platform.
+
+            <div className='absolute bottom-0 md:bottom-10 left-1/2 transform -translate-x-1/2 w-4/5 md:w-[390px] px-4 py-5 border font-poppins text-[14px] bg-black/30 backdrop-blur-sm'>
+              We are proud to be one of the few AWS Advanced Tier Partners in
+              Myanmar, demonstrating our expertise in cloud infrastructure and
+              commitment to delivering world-class solutions on the AWS
+              platform.
             </div>
           </div>
 
-          {/* Right Image with fade-in */}
+          {/* Right Image with fade-in for desktop */}
           <motion.div
-            className='md:absolute hidden md:block top-[60px] md:top-[140px] left-[40%] w-[61%] h-[300px] z-50'
+            className='xl:absolute hidden xl:block top-[140px] left-[40%] w-[61%] h-[300px] z-50'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
@@ -44,26 +54,27 @@ const Aboutb8: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Fully fluid responsive awspartner image */}
-        <div className='w-full md:hidden relative mt-10'>
+        {/* Mobile Responsive Image */}
+        <div className='w-full xl:hidden relative mt-10 aspect-[16/9]'>
           <Image
             src='/mobileAwsPartner.png'
             alt='awspartner'
-            width={1920} // original image width
-            height={1080} // original image height
-            style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+            fill
+            className='object-cover'
             priority
           />
         </div>
 
-        {/* Learn More button */}
-        <div className='flex md:hidden justify-center mt-10 md:mt-20'>
+        {/* Learn More Button */}
+        <div className='flex xl:hidden justify-center mt-10'>
           <button className='w-[171px] cursor-pointer border border-white h-[60px]'>
             Learn more
           </button>
         </div>
       </div>
-      <div className='md:flex hidden  justify-start mt-10 md:mt-20'>
+
+      {/* Desktop Learn More Button */}
+      <div className='xl:flex hidden justify-start mt-10 md:mt-20'>
         <button className='w-[171px] cursor-pointer border border-white h-[60px]'>
           Learn more
         </button>
