@@ -188,7 +188,7 @@ const NotFound: React.FC = () => {
 
       {/* Back to Home button — stays visible */}
       <motion.div
-        className='absolute bottom-[200px] lg:bottom-12 left-1/2 -translate-x-1/2 z-10'
+        className='absolute bottom-[100px] lg:bottom-12 left-1/2 -translate-x-1/2 z-10'
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1.4 }}

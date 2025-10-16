@@ -51,7 +51,7 @@ const CMobileHeader = () => {
 
       {/* Dropdown menu (placed outside header to fix blur stacking) */}
       {isMenuOpen && (
-        <div className="absolute right-5 top-[75px] flex flex-col items-start text-white p-7 space-y-3 font-roboto-flex font-medium text-sm border border-white/10 rounded-xl w-[240px] shadow-lg glass-bg  text-[16px]">
+        <div className="absolute right-5 top-[75px] flex flex-col items-start text-white p-7 space-y-3 font-roboto-flex font-medium text-sm border border-white/10 rounded-xl w-[240px] shadow-lg glass-bg  text-[16px] gap-[10px]">
           <Link
             href="/"
             className="hover:underline duration-300 cursor-pointer transition-all"
