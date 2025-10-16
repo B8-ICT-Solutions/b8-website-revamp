@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import CCursor from '../components/common/CCursor';
 import CGradientBackground from '../components/common/CGradientBackground';
 import CVdBackground from '../components/common/CVdBackground';
@@ -12,6 +12,8 @@ import CFooter from '../components/common/CFooter';
 import OurServices from '../about-us/components/OurServices';
 
 const Blog = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
   return (
     <div className='lg:pt-[100px] pt-[20px]'>
       <CCursor />
@@ -20,8 +22,8 @@ const Blog = () => {
       <CHeader />
       <CMobileHeader />
       <Hero/>
-      <SearchBar/>
-      <BlogContainer/>
+      <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <BlogContainer searchQuery={searchQuery} />
       <OurServices/>
       <CFooter/>
     </div>

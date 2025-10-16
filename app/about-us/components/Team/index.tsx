@@ -3,6 +3,8 @@ import React from 'react'
 import TeamCard from './TeamCard'
 
 
+
+
 const Team = () => {
   return (
     <div className='mt-[100px] lg:mt-[130px] text-center'>
@@ -17,7 +19,6 @@ const Team = () => {
             <TeamCard/>
             <TeamCard/>
             <TeamCard/>
-
         </div>
         </div>
     </div>

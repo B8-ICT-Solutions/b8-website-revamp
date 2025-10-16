@@ -17,7 +17,7 @@ const CMobileHeader = () => {
   }, []);
 
   return (
-    <div className="xl:hidden  fixed left-[10px] right-[10px] top-[10px] z-[9999]">
+    <div className="xl:hidden  fixed left-[15px] right-[15px] top-[15px] z-[9999]">
       {/* Header Bar */}
       <div
         className={`transition-colors duration-300 glass-bg rounded-full bg-transparent ${
@@ -51,7 +51,7 @@ const CMobileHeader = () => {
 
       {/* Dropdown menu (placed outside header to fix blur stacking) */}
       {isMenuOpen && (
-        <div className="absolute right-5 top-[75px] flex flex-col items-start text-white py-4 px-6 space-y-3 font-roboto-flex font-medium text-sm border border-white/10 rounded-xl w-[200px] shadow-lg glass-bg text-[16px]">
+        <div className="absolute right-5 top-[75px] flex flex-col items-start text-white p-7 space-y-3 font-roboto-flex font-medium text-sm border border-white/10 rounded-xl w-[240px] shadow-lg glass-bg  text-[16px]">
           <Link
             href="/"
             className="hover:underline duration-300 cursor-pointer transition-all"
