@@ -1,5 +1,6 @@
 // app/robots.ts
 import { MetadataRoute } from 'next'
+import BASEDOMAIN from './utils/base'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://b8-website-revamp.vercel.app/sitemap.xml',
+    sitemap: `${BASEDOMAIN}/sitemap.xml`,
   }
 }

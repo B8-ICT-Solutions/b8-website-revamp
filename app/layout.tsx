@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Tektur, Roboto_Flex, Inter, Poppins } from 'next/font/google';
 import './globals.css';
+import BASEDOMAIN from './utils/base';
 
 const tektur = Tektur({
   variable: '--font-tektur',
@@ -28,16 +29,16 @@ export const metadata: Metadata = {
   description:
     'B8 helps to manage your technology infrastructure, from consultation to execution.',
   keywords: ['B8', 'ICT', 'Solutions', 'Technology', 'Consulting'],
-  metadataBase: new URL('https://b8-website-revamp.vercel.app'),
+  metadataBase: new URL(BASEDOMAIN),
   openGraph: {
     title: 'B8 ICT Solutions',
     description:
       'B8 helps to manage your technology infrastructure, from consultation to execution.',
-    url: 'https://b8-website-revamp.vercel.app',
+    url: BASEDOMAIN,
     type: 'website',
     images: [
       {
-        url: 'https://b8-website-revamp.vercel.app/logo.png',
+        url: `${BASEDOMAIN}/logo.png`,
         width: 800,
         height: 600,
         alt: 'B8 Logo',
