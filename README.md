@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 B8 Website
 
-## Getting Started
 
-First, run the development server:
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will run at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000/
+```
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Tech Stack
 
-## Learn More
+- **Next.js** - Framework
+- **Framer Motion** - Animations
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🗂️ Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
 
-## Deploy on Vercel
+├── b8-website-revamp /
+│   ├── app/
+│   ├── about-us/
+│   ├── blogs/
+│   ├── components/
+│   ├── contact-us/
+│   ├── data/
+│   ├── Home/
+│   ├── services/
+│   ├── utils/
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── not-found.tsx
+│   ├── page.tsx
+│   ├── robots.ts
+│   └── sitemap.ts
+├── .eslintrc.cjs
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+
+---
+
+## 🧩 Customization
+
+👥 Team Members\
+Update the team members in /app/data/team.ts:
+
+```
+const teamMembers = [
+  { 
+    name: 'Minn Thit Kyaw',
+    position: 'Chief Technology Officer',
+    photo: '/pfps/min-thit-kyaw.png' 
+  }
+];
+```
+
+📝 Blog\
+Update the blogs  in /app/data/blog.ts:
+
+```
+export const blogPosts: BlogPost[] = [
+  {
+    title: "AWS 101: Amazon RDS",
+    description: "A high-level overview of Amazon RDS, including its features, benefits, and use cases in Burmese.",
+    category: 'AWS services',
+    date: 'April 29, 2025',
+    readTime: '3 min read',
+    slug: 'amazon-rds-101',
+    icons: ['aws'],
+    content: `
+<p>ဒီနေ့ အလှည့်ကျတာကတော့ AWS ရဲ့ database service ဖြစ်တဲ့ Amazon RDS ပဲဖြစ်ပါတယ်။ RDS ရဲ့ အရှည်ကောက်က Relational Database Service ဖြစ်ပါတယ်။ RDS က relational database ဖြစ်တဲ့အတွက် SQL use case အတွက်ပဲသုံးလို့ရမယ်။ NoSQL use case ဆိုရင်တော့ AWS မှာ service သပ်သပ်တွေရှိတယ်, document, dynamo, neptune စတာတွေပေါ့။</p>
+<br></br>
+<p>RDS မှာ MySQL, Postgresql စတဲ့ database မျိုးစုံသုံးလို့ရတယ်။ RDS ကလဲ EC2 instance လိုပဲ Database instance ရွေးပေးရတယ်။ ဘယ် size သုံးမှာလဲ ဘယ် spec သုံးမှာလဲဆိုပြီးရွေးပေးရတယ်။ ပြီးရင် RDS မှာ နာမည်အကြီးဆုံး ကတော့ Aurora ပဲ။ Aurora က တော်တော် high performance ဖြစ်တယ်၊ AWS ရဲ့ fully managed service လဲဖြစ်တယ်။ fully managed ဆိုတဲ့အတိုင်း hardware provisioning တွေ database setup တွေ patching တွေ AWS ဘက်ကတာဝန်ယူပေးတယ်။ Amazon Aurora က ရိုးရိုး RDS ထပ် ကောင်းတယ်ဆိုတော့ ဈေးကလဲပိုကြီးတာပေါ့။ ဒါမယ့် ပေးရတဲ့ဈေးနဲ့ ရတဲ့ performance နဲ့တော်တော်တန်တယ်လို့ပြောရမယ်။</p>
+<br></br>
+<p>RDS မှာ High Availability မြင့်အောင်လုပ်လို့ရတဲ့ features တွေရှိတယ်။ Read Replica တို့ Multi-AZ Deployment တို့ပေါ့။ ဒီ feature နှစ်ခုအကြောင်းရှင်းပြပေးမယ်။ Read Replica က database ကို ပုံစံတူ တစ်ခုခွဲထုတ်ထားတာပဲ။ Read Replica က ဘယ်အချိန်တွေသုံးလဲဆို application nature က read query က write query ထပ် နှစ်ဆလောက်များနေရင် Read Replica သုံးသင့်တယ်။ Read Replica ဆိုတဲ့အတိုင်း database ရဲ့ ပုံစံတူ ဒါပေမယ့် read လုပ်ဖို့အတွက်ပဲ။ primary database မှာ read query တွေ အရမ်းများလာတဲ့အခါ performance ကျပြီး write query အတွက်ပါ impact ရှိလာနိုင်တဲ့အတွက် Read Replica ခွဲထုတ်ရခြင်းသဘောပါ။ အဓိက ကတော့ write query ကို primary database မှာလုပ်မယ်။ primary database က write data ကို ပြီးမှ read replica တွေဆီ ပြန် replicate ပေးတာ။ ဒါကြောင့် read replica ကို asynchronous replication နဲ့ replicate တယ်လို့ခေါ်တယ်။</p>
+<br></br>
+<p>Multi-AZ Deployment ကကျတော့ Multi-AZ ဆိုတဲ့အတိုင်း Region တစ်ခုရဲ့ Availability Zone နှစ်ခုရှိတယ်ဆို အဲ့ AZ နှစ်ခုမှာ database တစ်လုံးစီ သွား deploy မှာ။ Primary တစ်လုံးနဲ့ Standby နောက်တစ်လုံး။ Multi-AZ Deployment မှာ database နှစ်လုံးကို ကြားထဲမှာ synchronous replication နဲ့ replicate လုပ်တယ်။ တစ်လုံးမှာ လာ write ရင် အဲ့ write data ကို နောက်တစ်လုံးကို တန်း replicate လုပ်ပေးတယ်။ </p>
+<br><br>
+<p>Read Write တစ်လုံးစီ ထားတဲ့ deployment မှာ read replica ကို primary database ရဲ့ region နဲ့ မတူတဲ့ region မှာ သွားဆောက်မယ်ဆိုရင်တော့ read replica ကဈေးပိုကြီးလိမ့်မယ်။ ဘာလို့ဆို region နှစ်ခု data replication လုပ်မှာဖြစ်တဲ့အတွက် data transfer in and out charges cost တွေရှိလာနိုင်တယ်။ </p>
+`
+  }]
+```
+
+
+
+---

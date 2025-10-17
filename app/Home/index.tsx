@@ -68,7 +68,7 @@ const Home = () => {
 
       <ScrollMore />
 
-      <div className='mt-[100px] xl:mt-[200px]'>
+      <div className='mt-[100px] xl:mt-[200px] 2xl:mt-[400px]'>
         <Marquee />
       </div>
       <ServicesSection />
