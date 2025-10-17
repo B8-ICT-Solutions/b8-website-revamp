@@ -13,7 +13,7 @@ const GlassImage = () => {
         willChange: 'transform',
         transform: 'translateZ(0)',
       }}
-      className='xl:left-[calc(43%-5px)] h-[685px] xl:w-[57%] left-0 w-full relative overflow-hidden'
+      className='xl:left-[calc(43%-2px)] h-[685px] xl:w-[57%] left-0 w-full relative overflow-hidden'
     >
       <Image
         src='/glass.png'
