@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Tektur, Roboto_Flex, Inter, Poppins } from 'next/font/google';
+import { Tektur, Roboto_Flex, Inter, Poppins, } from 'next/font/google';
 import './globals.css';
 import BASEDOMAIN from './utils/base';
 
