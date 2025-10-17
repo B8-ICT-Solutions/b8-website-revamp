@@ -1,3 +1,4 @@
+'use client'
 import CCursor from '@/app/components/common/CCursor';
 import CGradientBackground from '@/app/components/common/CGradientBackground';
 import CHeader from '@/app/components/common/CHeader';
