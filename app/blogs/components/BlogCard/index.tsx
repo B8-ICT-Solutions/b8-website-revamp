@@ -44,13 +44,16 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
 
   return (
     <div className='border p-4 pb-6 border-white/50 relative overflow-hidden group transition-all duration-300 hover:scale-[1.02] hover:border-white flex flex-col h-full'>
-      {/* Background image */}
+      {/* Background image (hidden by default, visible on hover) */}
       <Image
         src='/blogBg.png'
         alt='Blog background'
         fill
-        className='absolute top-0 left-0 object-cover -z-10 opacity-50 lg:hidden'
+        className='absolute top-0 left-0 object-cover -z-10 opacity-0 transition-opacity duration-500 group-hover:opacity-100'
       />
+
+      {/* Optional gradient overlay for readability */}
+      <div className='absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10' />
 
       {/* Header */}
       <div className='flex justify-between p-2 relative z-10'>
@@ -73,8 +76,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => {
           className='mb-2 md:text-[20px] lg:text-[30px] line-clamp-2'
         />
 
-        <AnimateText description={description}/>
-       
+        <AnimateText description={description} />
 
         {/* Footer */}
         <div className='flex justify-between items-center mt-4'>

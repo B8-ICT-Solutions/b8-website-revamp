@@ -12,7 +12,7 @@ const HeroText = () => {
         ease: [0.25, 0.1, 0.25, 1],
       }}
       viewport={{ once: true }}
-      className=' z-50 absolute font-roboto-flex xl:text-[20px] top-[525px] 2xl:top-[700px] w-[370px]  font-medium left-[43%] hidden xl:block '
+      className=' z-50 absolute text-white/80 font-roboto-flex xl:text-[18px] top-[530px] 2xl:top-[700px] w-[370px]  font-medium left-[43%] hidden xl:block '
     >
       B8 helps to manage your technology infrastructure, from consultation to
       execution.

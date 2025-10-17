@@ -79,28 +79,23 @@ body {
 
 @keyframes ledGlow {
   0% {
-    background-image: linear-gradient(to bottom, #ffffff 0%, #7B747E 30%, #7B747E 100%);
-  }
-  25% {
-    background-image: linear-gradient(to bottom, #d9d5db 0%, #7B747E 40%, #7B747E 100%);
-  }
-  50% {
-    background-image: linear-gradient(to top, #ffffff 0%, #7B747E 30%, #7B747E 100%);
-  }
-  75% {
-    background-image: linear-gradient(to top, #d9d5db 0%, #7B747E 40%, #7B747E 100%);
+    background-position: 0% -100%;
   }
   100% {
-    background-image: linear-gradient(to bottom, #ffffff 0%, #7B747E 30%, #7B747E 100%);
+    background-position: 0% 100%;
   }
 }
 
 .animate-led {
-  background-size: 100% 100%;
+  background: linear-gradient(to bottom, 
+              #7B747E 0%, 
+              #ffffff 50%, 
+              #7B747E 100%);
+  background-size: 100% 200%; /* double height for smooth travel */
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: ledGlow 6s ease-in-out infinite;
+  animation: ledGlow 5s linear infinite;
 }
 
 

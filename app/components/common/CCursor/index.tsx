@@ -28,7 +28,7 @@ const CCursor = () => {
         x: smoothX,
         y: smoothY,
       }}
-      className="pointer-events-none hidden lg:block fixed top-0 left-0 w-6 h-6 bg-[#6817E5] rounded-full shadow-lg z-50 transform -translate-x-1/2 -translate-y-1/2"
+      className="pointer-events-none hidden lg:block fixed top-0 left-0 w-4 h-4 bg-[#6917e5c3] rounded-full shadow-lg z-50 transform -translate-x-1/2 -translate-y-1/2"
     />
   );
 };
