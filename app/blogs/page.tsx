@@ -1,31 +1,33 @@
-'use client';
-import React, { useState } from 'react';
-import CCursor from '../components/common/CCursor';
-import CGradientBackground from '../components/common/CGradientBackground';
-import CVdBackground from '../components/common/CVdBackground';
-import CHeader from '../components/common/CHeader';
-import CMobileHeader from '../components/common/CMobileHeader';
-import Hero from './components/Hero';
-import SearchBar from './components/SearchBar';
-import BlogContainer from './components/BlogContainer';
-import CFooter from '../components/common/CFooter';
-import OurServices from '../about-us/components/OurServices';
+import { Metadata } from 'next';
+import BlogsClient from './blogsClient';
+
+export const metadata: Metadata = {
+  title: 'Blogs | B8 ICT Solutions',
+  description:
+    ' Insights, case studies, and news from the B8 ICT Solutions team.',
+  keywords: ['About us', 'Company', 'Mission', 'Vision'],
+  metadataBase: new URL('https://b8-website-revamp.vercel.app'),
+  openGraph: {
+    title: 'Blogs | B8 ICT Solutions',
+    description:
+      ' Insights, case studies, and news from the B8 ICT Solutions team.',
+    url: 'https://b8-website-revamp.vercel.app/blogs',
+    type: 'website',
+    images: [
+      {
+        url: 'https://b8-website-revamp.vercel.app/logo.png',
+        width: 800,
+        height: 600,
+        alt: 'Company Logo',
+      },
+    ],
+  },
+};
 
 const Blog = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-
   return (
     <div className='lg:pt-[100px] pt-[20px]'>
-      <CCursor />
-      <CGradientBackground />
-      <CVdBackground />
-      <CHeader />
-      <CMobileHeader />
-      <Hero/>
-      <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <BlogContainer searchQuery={searchQuery} />
-      <OurServices/>
-      <CFooter/>
+      <BlogsClient />
     </div>
   );
 };
