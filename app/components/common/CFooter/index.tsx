@@ -3,6 +3,16 @@ import React from 'react';
 import Image from 'next/image';
 import CGradientBackground from '../CGradientBackground';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+
+
+const navLinks = [
+  { name: "Home", link: "/" },
+  { name: "About Us", link: "/about-us" },
+  { name: "Services", link: "/services" },
+  { name: "Blogs", link: "/blogs" },
+  { name: "Contact Us", link: "/contact-us" },
+];
 
 const CFooter = () => {
   return (
@@ -50,17 +60,20 @@ const CFooter = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 1 }}
         >
-          {['Home', 'About Us', 'News', 'Teams', 'Events', 'Media'].map(
-            (link, i) => (
-              <motion.h3
-                key={i}
-                className="cursor-pointer hover:text-[#C3A9FF] hover:underline transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-              >
-                {link}
-              </motion.h3>
-            )
-          )}
+              {navLinks.map((item, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Link
+                    href={item.link}
+                    className="text-lg cursor-pointer hover:text-[#C3A9FF] hover:underline transition-all duration-300"
+                  >
+                    {item.name}
+                  </Link>
+                </motion.div>
+              ))}
         </motion.div>
 
         {/* Contact Form */}
