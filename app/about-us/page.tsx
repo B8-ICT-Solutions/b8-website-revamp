@@ -1,39 +1,47 @@
-'use client';
-import React from 'react';
-
-import CMobileHeader from '../components/common/CMobileHeader';
-import CGradientBackground from '../components/common/CGradientBackground';
-import CVdBackground from '../components/common/CVdBackground';
-import CFooter from '../components/common/CFooter';
-import Hero from './components/Home';
-import Intro from './components/Intro';
-import Team from './components/Team';
-import CHeader from '../components/common/CHeader';
-import OurServices from './components/OurServices';
-import CoreValues from './components/CoreValues';
-import CCursor from '../components/common/CCursor';
+import Head from 'next/head';
+import AboutClient from './aboutClient';
 
 const AboutUs = () => {
   return (
-    <div className='pt-[100px]'>
-      {/* Background Gradient (pale, behind everything) */}
-      <CCursor/>
+    <>
+      <Head>
+        {/* Basic SEO */}
+        <title>About Us | Your Company Name</title>
+        <meta
+          name="description"
+          content="We are a team of passionate engineers dedicated to solving complex problems with innovative technology."
+        />
+        <meta name="keywords" content="About us, Company, Mission, Vision" />
+        <link rel="canonical" href="https://b8-website-revamp.vercel.app/about-us" />
 
-      <CGradientBackground />
+        {/* Open Graph (Facebook, LinkedIn, etc.) */}
+        <meta property="og:title" content="About Us | Your Company Name" />
+        <meta
+          property="og:description"
+          content="We are a team of passionate engineers dedicated to solving complex problems with innovative technology."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://b8-website-revamp.vercel.app/about-us" />
+        <meta property="og:image" content="https://b8-website-revamp.vercel.app/og-image.jpg" />
 
-      {/* Background Video */}
-      <CVdBackground />
-      <CHeader />
-      <CMobileHeader />
-      <Hero />
-      <Intro />
-      <Team />
-      <CoreValues />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Us | Your Company Name" />
+        <meta
+          name="twitter:description"
+          content="We are a team of passionate engineers dedicated to solving complex problems with innovative technology."
+        />
+        <meta name="twitter:image" content="https://b8-website-revamp.vercel.app/og-image.jpg" />
+        <meta name="twitter:site" content="@YourTwitterHandle" />
+      </Head>
 
-      <OurServices />
+      <main className="pt-[100px]">
 
-      <CFooter />
-    </div>
+        <section>
+          <AboutClient />
+        </section>
+      </main>
+    </>
   );
 };
 
