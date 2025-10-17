@@ -111,3 +111,48 @@ export const blogPosts: BlogPost[] = [
 
 
 ---
+
+---
+
+## 🔍 SEO Configuration
+
+All SEO-related settings are located inside the app/ directory.
+
+🗺️ Sitemap
+
+Edit /app/sitemap.ts to configure your website’s sitemap for search engines.
+
+🤖 Robots.txt
+
+Update /app/robots.ts to manage which pages should be indexed or excluded.
+
+🧠 Metadata
+
+Inside each page (e.g., /app/page.tsx), use the built-in Next.js Metadata API for titles, descriptions, and open graph tags:
+
+```
+export const metadata: Metadata = {
+  title: 'B8 ICT Solutions',
+  description:
+    'B8 helps to manage your technology infrastructure, from consultation to execution.',
+  keywords: ['B8', 'ICT', 'Solutions', 'Technology', 'Consulting'],
+  metadataBase: new URL(BASEDOMAIN),
+  openGraph: {
+    title: 'B8 ICT Solutions',
+    description:
+      'B8 helps to manage your technology infrastructure, from consultation to execution.',
+    url: BASEDOMAIN,
+    type: 'website',
+    images: [
+      {
+        url: `${BASEDOMAIN}/logo.png`,
+        width: 800,
+        height: 600,
+        alt: 'B8 Logo',
+      },
+    ],
+  },
+};
+```
+
+![App Screenshot](https://res.cloudinary.com/dbqyaigcg/image/upload/v1760709918/Screenshot_2025-10-17_at_13.51.44_sd9tzo.png)
